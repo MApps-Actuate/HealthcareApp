@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="layoutPreference">auto layout</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems</property>
+        </structure>
+    </list-property>
+    <property name="dashboardView">
+        <dashboard id="2">
+            <property name="activeTab">2897d9eb-1449-4198-93a6-05e20231ba79</property>
+            <property name="tabs">
+                <tab-element name="2897d9eb-1449-4198-93a6-05e20231ba79" id="30">
+                    <property name="title">Performance Indicators</property>
+                    <property name="externalTab">/Applications/HealthcareApp/Dashboards/Performance Indicators.dashboard</property>
+                    <property name="externalTabName">180a3b33-87c3-4efd-af27-ac689d7b111c</property>
+                </tab-element>
+                <tab-element name="81b8d143-91e2-466a-8557-7d6943942bf1" id="31">
+                    <property name="title">Key Performance Trends</property>
+                    <property name="externalTab">/Applications/HealthcareApp/Dashboards/Key Performance Trends.dashboard</property>
+                    <property name="externalTabName">180a3b33-87c3-4efd-af27-ac689d7b111c</property>
+                </tab-element>
+                <tab-element name="c8210368-13e8-4a77-885f-4d08804ba2e7" id="32">
+                    <property name="title">Cost of Care</property>
+                    <property name="externalTab">/Applications/HealthcareApp/Dashboards/Cost Of Care.dashboard</property>
+                    <property name="externalTabName">6930759a-e571-468f-a504-c86338b3c4371</property>
+                </tab-element>
+                <tab-element name="eb977d80-75c3-44e5-a71f-3dd16594de14" id="12">
+                    <property name="title">Briefing Book</property>
+                    <property name="externalTab">^/Dashboards/Briefing Book.dashboard</property>
+                    <property name="externalTabName">1d5b23ed-12c3-482a-92e3-273e88477022</property>
+                </tab-element>
+                <tab-element name="61b599c3-247b-4c0b-b82c-0742f49372bd" id="13">
+                    <property name="title">Corporate Strategy</property>
+                    <property name="externalTab">^/Dashboards/Corporate Strategy.dashboard</property>
+                    <property name="externalTabName">a85c1d0a-ffb6-42d5-b624-bbac5298b0f7</property>
+                </tab-element>
+                <tab-element name="08504465-b4e8-447a-9dbe-fdf671c83a0c" id="14">
+                    <property name="title">Overall Healthcare KPI View</property>
+                    <property name="externalTab">^/Dashboards/Overall Healthcare KPI View.dashboard</property>
+                    <property name="externalTabName">70943a32-e8dc-46ba-aa34-8fd52e028732</property>
+                </tab-element>
+            </property>
+        </dashboard>
+    </property>
+</report>
