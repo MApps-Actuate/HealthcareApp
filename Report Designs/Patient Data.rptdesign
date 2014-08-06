@@ -598,6 +598,10 @@
             </list-property>
         </label>
         <table id="267">
+            <property name="borderBottomStyle">none</property>
+            <property name="borderLeftStyle">none</property>
+            <property name="borderRightStyle">none</property>
+            <property name="borderTopStyle">none</property>
             <property name="dataSet">Patient Data</property>
             <property name="theme">ThemesReportItems3.Modern Table</property>
             <list-property name="boundDataColumns">
@@ -653,9 +657,18 @@
             <column id="312"/>
             <header>
                 <row id="314">
+                    <property name="borderBottomStyle">none</property>
+                    <property name="borderLeftStyle">none</property>
+                    <property name="borderRightStyle">none</property>
+                    <property name="borderTopStyle">none</property>
                     <cell id="315">
                         <property name="colSpan">7</property>
                         <property name="rowSpan">1</property>
+                        <property name="backgroundColor">white</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
                         <extended-item extensionName="Chart" id="322">
                             <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
  <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Stacked">
@@ -851,54 +864,58 @@
                             <property name="outputFormat">JS</property>
                             <property name="inheritColumns">true</property>
                             <property name="height">2.875in</property>
-                            <property name="width">9in</property>
+                            <property name="width">10in</property>
                             <property name="theme">ThemesReportItems3.Modern</property>
                         </extended-item>
                     </cell>
                 </row>
-                <row id="323">
-                    <property name="height">0.23958333333333334in</property>
-                    <cell id="324"/>
-                    <cell id="325"/>
-                    <cell id="326"/>
-                    <cell id="327"/>
-                    <cell id="328"/>
-                    <cell id="329"/>
-                    <cell id="330"/>
-                </row>
                 <row id="268">
                     <cell id="269">
                         <label id="270">
+                            <property name="marginTop">10pt</property>
+                            <property name="marginBottom">5pt</property>
                             <text-property name="text">Patient ID</text-property>
                         </label>
                     </cell>
                     <cell id="271">
                         <label id="272">
+                            <property name="marginTop">10pt</property>
+                            <property name="marginBottom">5pt</property>
                             <text-property name="text">Diagnosis</text-property>
                         </label>
                     </cell>
                     <cell id="273">
                         <label id="274">
+                            <property name="marginTop">10pt</property>
+                            <property name="marginBottom">5pt</property>
                             <text-property name="text">Prescription</text-property>
                         </label>
                     </cell>
                     <cell id="275">
                         <label id="276">
+                            <property name="marginTop">10pt</property>
+                            <property name="marginBottom">5pt</property>
                             <text-property name="text">Appt Date</text-property>
                         </label>
                     </cell>
                     <cell id="277">
                         <label id="278">
+                            <property name="marginTop">10pt</property>
+                            <property name="marginBottom">5pt</property>
                             <text-property name="text">Would Recommend</text-property>
                         </label>
                     </cell>
                     <cell id="279">
                         <label id="280">
+                            <property name="marginTop">10pt</property>
+                            <property name="marginBottom">5pt</property>
                             <text-property name="text">Gender</text-property>
                         </label>
                     </cell>
                     <cell id="281">
                         <label id="282">
+                            <property name="marginTop">10pt</property>
+                            <property name="marginBottom">5pt</property>
                             <text-property name="text">Cost</text-property>
                         </label>
                     </cell>
