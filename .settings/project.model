@@ -79,7 +79,9 @@
       <columns name="WorstMsrIdxColor"/>
       <columns name="WorstLocIdxRangeId"/>
       <columns name="WorstLocIdxColor"/>
-      <columns name="ReportingPeriodShortDate" expression="row[&quot;PeriodName&quot;].substr(5,2)"/>
+      <columns name="ReportingPeriodMonth" expression="row[&quot;PeriodName&quot;].substr(5,2)"/>
+      <columns name="ReportingPeriodYear" expression="row[&quot;PeriodName&quot;].substr(0,4)"/>
+      <columns name="ReportingDate" expression="BirtDateTime.date(row[&quot;ReportingPeriodYear&quot;],row[&quot;ReportingPeriodMonth&quot;],1)"/>
     </dataSets>
     <dataSets name="Commentary">
       <columns name="MeasureName"/>
@@ -109,17 +111,11 @@
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:Data" name="Healthcare.data" path="/HealthcareApp/Data Objects/Healthcare.data">
     <targetReportsMap key="//@files.17" value="1"/>
+    <targetReportsMap key="//@files.19" value="1"/>
     <targetReportsMap key="//@files.20" value="1"/>
     <targetReportsMap key="//@files.21" value="1"/>
     <targetReportsMap key="//@files.22" value="1"/>
-    <targetReportsMap key="//@files.23" value="1"/>
     <targetReportsMap key="//@files.24" value="1"/>
-    <targetReportsMap key="//@files.25" value="1"/>
-    <targetReportsMap key="//@files.26" value="1"/>
-    <targetReportsMap key="//@files.27" value="1"/>
-    <targetReportsMap key="//@files.31" value="1"/>
-    <targetReportsMap key="//@files.28" value="1"/>
-    <targetReportsMap key="//@files.32" value="1"/>
     <targetDashboardsMap key="//@files.11" value="1"/>
     <targetDashboardsMap key="//@files.16" value="1"/>
   </files>
@@ -128,10 +124,10 @@
     <dataMap key="//@files.5" value="1"/>
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:Data" name="MapDiagnositc.data" path="/HealthcareApp/Data Objects/MapDiagnositc.data">
-    <targetReportsMap key="//@files.19" value="1"/>
+    <targetReportsMap key="//@files.23" value="1"/>
     <targetDashboardsMap key="//@files.4" value="1"/>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="ThemesReportItems.rptlibrary" path="/HealthcareApp/ThemesReportItems.rptlibrary" reports="//@files.17 //@files.20 //@files.21 //@files.22 //@files.23 //@files.24 //@files.25 //@files.26 //@files.27 //@files.31 //@files.28 //@files.32"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="ThemesReportItems.rptlibrary" path="/HealthcareApp/ThemesReportItems.rptlibrary" reports="//@files.17 //@files.19 //@files.20 //@files.21 //@files.22 //@files.24"/>
   <files xsi:type="com.actuate.istudio.analysis.model:Data" name="PatientData.data" path="/HealthcareApp/Data Objects/PatientData.data">
     <targetReportsMap key="//@files.18" value="1"/>
   </files>
@@ -154,7 +150,7 @@
       <columns name="Pct" expression="row[&quot;rate&quot;]*100"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="ThemesReportItems3.rptlibrary" path="/HealthcareApp/ThemesReportItems3.rptlibrary" reports="//@files.17 //@files.18 //@files.19 //@files.20 //@files.21 //@files.22 //@files.23 //@files.24 //@files.25 //@files.26 //@files.27 //@files.31 //@files.28 //@files.32"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="ThemesReportItems3.rptlibrary" path="/HealthcareApp/ThemesReportItems3.rptlibrary" reports="//@files.17 //@files.18 //@files.19 //@files.20 //@files.21 //@files.22 //@files.23 //@files.24"/>
   <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="Health.datadesign" path="/HealthcareApp/Data Objects/Health.datadesign">
     <dataSets name="Diagnostics Fact Data Set">
       <columns name="Contact History Id"/>
@@ -225,13 +221,7 @@
       <columns name="Cost"/>
     </dataSets>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Health-IL.rptdesign" path="/HealthcareApp/Report Designs/Health-IL.rptdesign" libraries="//@files.13">
-    <dataMap key="//@files.5" value="1"/>
-  </files>
   <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="MetricsOverTime_Safety.rptdesign" path="/HealthcareApp/Report Designs/MetricsOverTime_Safety.rptdesign" libraries="//@files.13 //@files.6">
-    <dataMap key="//@files.3" value="1"/>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="PerformanceIndicators.rptdesign" path="/HealthcareApp/Report Designs/PerformanceIndicators.rptdesign" libraries="//@files.13 //@files.6">
     <dataMap key="//@files.3" value="1"/>
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="MetricsOverTime_PatientSatisfaction.rptdesign" path="/HealthcareApp/Report Designs/MetricsOverTime_PatientSatisfaction.rptdesign" libraries="//@files.13 //@files.6">
@@ -243,128 +233,8 @@
   <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="MetricsOverTime_Finance.rptdesign" path="/HealthcareApp/Report Designs/MetricsOverTime_Finance.rptdesign" libraries="//@files.13 //@files.6">
     <dataMap key="//@files.3" value="1"/>
   </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="MetricsOverTime_CoreMeasures.rptdesign" path="/HealthcareApp/MetricsOverTime_CoreMeasures.rptdesign" libraries="//@files.13 //@files.6">
-    <dataMap key="//@files.3" value="1"/>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="MetricsOverTime_Finance.rptdesign" path="/HealthcareApp/MetricsOverTime_Finance.rptdesign" libraries="//@files.13 //@files.6">
-    <dataMap key="//@files.3" value="1"/>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="MetricsOverTime_PatientSatisfaction.rptdesign" path="/HealthcareApp/MetricsOverTime_PatientSatisfaction.rptdesign" libraries="//@files.13 //@files.6">
-    <dataMap key="//@files.3" value="1"/>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="MetricsOverTime_dashboard.rptdesign" path="/HealthcareApp/MetricsOverTime_dashboard.rptdesign" libraries="//@files.13 //@files.6">
-    <dataMap key="//@files.3" value="1"/>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="Healthcare.data" path="/HealthcareApp/Data Objects/Healthcare.data"/>
-  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="Healthcare.datadesign" path="/HealthcareApp/Data Objects/Healthcare.datadesign">
-    <dataSets name="List of Views">
-      <columns name="Id"/>
-      <columns name="Name"/>
-      <columns name="Description"/>
-      <columns name="SeqNo"/>
-    </dataSets>
-    <dataSets name="Measure Meta data">
-      <columns name="MeasureName"/>
-      <columns name="LocationName"/>
-      <columns name="Description"/>
-      <columns name="Notes"/>
-      <columns name="Critical"/>
-      <columns name="Owner"/>
-      <columns name="OwnerAssistant"/>
-      <columns name="Link"/>
-      <columns name="UnitName"/>
-      <columns name="UnitDescription"/>
-      <columns name="UnitPrefix"/>
-      <columns name="UnitSuffix"/>
-      <columns name="UnitThousandSeparator"/>
-      <columns name="UnitDecimalSeparator"/>
-      <columns name="UnitWholeDigits"/>
-      <columns name="UnitDecimalDigits"/>
-      <columns name="Kind"/>
-      <columns name="Polarity"/>
-      <columns name="StoragePeriod"/>
-      <columns name="ConsolidationPeriod"/>
-      <columns name="LocationConsolidation"/>
-      <columns name="LocationIgnoreBlank"/>
-      <columns name="PeriodConsolidation"/>
-      <columns name="PeriodIgnoreBlank"/>
-      <columns name="OrderOfCalculation"/>
-      <columns name="Formula"/>
-      <columns name="Submeasures"/>
-    </dataSets>
-    <dataSets name="Hierarchy Info From View">
-      <columns name="MeasureLevel"/>
-      <columns name="ParentMeasureName"/>
-      <columns name="MeasureName"/>
-      <columns name="LocationLevel"/>
-      <columns name="ParentLocationName"/>
-      <columns name="LocationName"/>
-      <columns name="PeriodName"/>
-      <columns name="BaseName"/>
-      <columns name="BaseData"/>
-      <columns name="CompName"/>
-      <columns name="CompData"/>
-      <columns name="CompVar"/>
-      <columns name="CompVarPct"/>
-      <columns name="CompIdx"/>
-      <columns name="CompIdxRangeId"/>
-      <columns name="CompIdxColor"/>
-      <columns name="CompTxtColor"/>
-      <columns name="WorstMsrIdxRangeId"/>
-      <columns name="WorstMsrIdxColor"/>
-      <columns name="WorstLocIdxRangeId"/>
-      <columns name="WorstLocIdxColor"/>
-    </dataSets>
-    <dataSets name="Data From View">
-      <columns name="MeasureName"/>
-      <columns name="LocationName"/>
-      <columns name="PeriodName"/>
-      <columns name="BaseName"/>
-      <columns name="BaseData"/>
-      <columns name="CompName"/>
-      <columns name="CompData"/>
-      <columns name="CompVar"/>
-      <columns name="CompVarPct"/>
-      <columns name="CompIdx"/>
-      <columns name="CompIdxRangeId"/>
-      <columns name="CompIdxColor"/>
-      <columns name="CompTxtColor"/>
-      <columns name="WorstMsrIdxRangeId"/>
-      <columns name="WorstMsrIdxColor"/>
-      <columns name="WorstLocIdxRangeId"/>
-      <columns name="WorstLocIdxColor"/>
-      <columns name="ReportingPeriodMonth" expression="row[&quot;PeriodName&quot;].substr(5,2)"/>
-      <columns name="ReportingPeriodYear" expression="row[&quot;PeriodName&quot;].substr(0,4)"/>
-      <columns name="ReportingDate" expression="BirtDateTime.date(row[&quot;ReportingPeriodYear&quot;],row[&quot;ReportingPeriodMonth&quot;],1)"/>
-    </dataSets>
-    <dataSets name="Commentary">
-      <columns name="MeasureName"/>
-      <columns name="LocationName"/>
-      <columns name="PeriodName"/>
-      <columns name="CommentaryType"/>
-      <columns name="CommentaryText"/>
-      <columns name="SignatureName"/>
-      <columns name="SignatureTime"/>
-    </dataSets>
-    <dataSets name="List of Measures">
-      <columns name="Id"/>
-      <columns name="Name"/>
-      <columns name="Description"/>
-      <columns name="SeqNo"/>
-    </dataSets>
-    <dataSets name="List of Locations">
-      <columns name="Id"/>
-      <columns name="Name"/>
-      <columns name="Description"/>
-      <columns name="SeqNo"/>
-    </dataSets>
-    <dataSets name="List of Periods">
-      <columns name="Id"/>
-      <columns name="Name"/>
-    </dataSets>
-  </files>
-  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="MetricsOverTime_Safety.rptdesign" path="/HealthcareApp/Report Designs/MetricsOverTime_Safety.rptdesign" libraries="//@files.13 //@files.6">
-    <dataMap key="//@files.3" value="1"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Health-IL.rptdesign" path="/HealthcareApp/Report Designs/Health-IL.rptdesign" libraries="//@files.13">
+    <dataMap key="//@files.5" value="1"/>
   </files>
   <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="PerformanceIndicators.rptdesign" path="/HealthcareApp/Report Designs/PerformanceIndicators.rptdesign" libraries="//@files.13 //@files.6">
     <dataMap key="//@files.3" value="1"/>

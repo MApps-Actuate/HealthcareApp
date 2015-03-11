@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150128-0131 Build &lt;4.2.3.v20150128-0131></property>
     <list-property name="userProperties">
         <structure>
             <property name="name">Data Cube.Diagnostics Data Set.x</property>
@@ -646,6 +646,30 @@
             <property name="name">rowFetchSize</property>
             <property name="id">106</property>
         </structure>
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">107</property>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">107</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">107</property>
+        </structure>
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">109</property>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">109</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">109</property>
+        </structure>
     </list-property>
     <data-sources>
         <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="105">
@@ -666,9 +690,9 @@
                 </ex-property>
             </list-property>
             <property name="odaDriverClass">com.actuate.jdbc.sqlserver.SQLServerDriver</property>
-            <property name="odaURL">jdbc:actuate:sqlserver://localhost;databasename=Health</property>
-            <property name="odaUser">sa</property>
-            <encrypted-property name="odaPassword" encryptionID="jce">bc3c04e2fedfc17e</encrypted-property>
+            <property name="odaURL">jdbc:actuate:sqlserver://ACTUATEONE\sqlexpress;databasename=Health;AuthenticationMethod=ntlmjava;domaind=ActuateOne</property>
+            <property name="odaUser">ActuateOne\ActuateUser</property>
+            <encrypted-property name="odaPassword" encryptionID="jce">e8e06d7e395d6ba1</encrypted-property>
         </oda-data-source>
     </data-sources>
     <data-sets>
@@ -1218,7 +1242,7 @@ where
                     <structure name="action">
                         <property name="targetWindow">_blank</property>
                         <property name="linkType">hyperlink</property>
-                        <expression name="uri" type="constant">http://actuateone:8114/bafrontend/client/build/client.jsp</expression>
+                        <expression name="uri" type="constant">/iportal/launchBA.jsp</expression>
                     </structure>
                     <property name="indexColumn">false</property>
                     <property name="compressed">false</property>
@@ -1323,6 +1347,8 @@ ORDER BY [Age]]]></xml-property>
                     <property name="analysis">dimension</property>
                     <text-property name="displayName">Contact Date</text-property>
                     <text-property name="heading">Contact Date</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
                 </structure>
                 <structure>
                     <property name="columnName">Contact Date Month</property>
